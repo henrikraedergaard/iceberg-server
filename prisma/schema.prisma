@@ -59,6 +59,14 @@ model Account {
   @@map("account")
 }
 
+model Ping {
+  id        String   @id @default(cuid())
+  message   String
+  createdAt DateTime @default(now())
+
+  @@map("ping")
+}
+
 model Verification {
   id         String    @id
   identifier String
